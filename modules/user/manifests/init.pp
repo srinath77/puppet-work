@@ -41,7 +41,13 @@ class user {
       require  =>Group['kkd'],
      shell    =>'/bin/bash',
      }
-   group {'kkd':
+  user { 'ratz':
+     ensure => 'present',
+     require =>Group['kkd'],
+     shell =>'/bin/bash',
+     }
+     
+   group {'kkd','ratz':
        ensure => 'present',
        gid => '1483',
 
