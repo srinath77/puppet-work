@@ -47,7 +47,7 @@ class user {
      shell =>'/bin/bash',
      }
      
-   group {'kkd','ratz':
+   group {'kkd':
        ensure => 'present',
        gid => '1483',
 
