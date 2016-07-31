@@ -1,6 +1,6 @@
-# == Class: file
+# == Class: aravind
 #
-# Full description of class file here.
+# Full description of class aravind here.
 #
 # === Parameters
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { file:
+#  class { aravind:
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #
@@ -35,11 +35,12 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class file {
-    file { '/tmp/link-to-motd':
-    ensure => 'link',
-    target => '/etc/motd',
-  }
-
-
+class aravind {
+      file { '/tmp/aravind':
+             ensure => 'link',
+             owner   => 'root',
+             group  => 'root',
+             target  => '/home/fun-files',
+             
+}
 }
