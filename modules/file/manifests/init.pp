@@ -36,6 +36,10 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class file {
+    file { '/tmp/link-to-motd':
+    ensure => 'link',
+    target => '/etc/motd',
+  }
 
 
 }
