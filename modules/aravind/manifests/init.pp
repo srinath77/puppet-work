@@ -49,7 +49,7 @@ class aravind {
   }
      exec { 'git_version_Check':
      path     => '/home/puppet',
-     command => 'apt-get update',
+     command => 'ls -al',
      }
 
 }      
