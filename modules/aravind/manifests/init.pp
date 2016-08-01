@@ -41,14 +41,10 @@ class aravind {
              owner   => 'root',
              group  => 'root',
              target  => '/home/fun-files',
+             }
+      }
              
-}
 
 
 
-exec { "git_check":
-    #  cwd   =>  '/home/ram',
-    command => 'apt-get update',
 
-}
-}
