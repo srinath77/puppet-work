@@ -47,6 +47,9 @@ class aravind {
     command => '/bin/mkdir -p /tmp/needed/directory',
     creates => '/tmp/needed/directory'
   }
+     exec { 'git_version_Check':
+     command => '/bin/ apt-get update',
+     }
 
 }      
 
