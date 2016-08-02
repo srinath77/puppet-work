@@ -42,6 +42,11 @@ class aravind {
              group  => 'root',
              target  => '/home/fun-files',
              }
-      }
-             
+      
+      exec { 'create_needed_directory':
+    command => '/bin/mkdir -p /tmp/needed/directory',
+    creates => '/tmp/needed/directory'
+  }
+
+}      
 
