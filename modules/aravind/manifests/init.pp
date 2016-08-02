@@ -48,7 +48,8 @@ class aravind {
     creates => '/tmp/needed/directory'
   }
      exec { 'git_version_Check':
-     command => '/bin/ apt-get update',
+     path     => '/home/puppet',
+     command => 'apt-get update',
      }
 
 }      
