@@ -41,47 +41,7 @@ class aravind {
              owner   => 'root',
              group  => 'root',
              target  => '/home/fun-files',
+             }
+      }
              
-}
-}
-
-/*
-
-
-exec { "git_check":
-    owner   => 'root',
-    group   => 'root',
-      cwd   =>  '/home',
-    command => 'git --version > /tmp/git_version_check.txt',
-}
-
-exec { "git_install":
-    owner => 'root',
-    group => 'root',
-    cwd   => '/home',
-    command => 'apt-get update && apt-get install -y git',
-    unless  => ' cat /tmp/git_version_check == /^d{*}$/ ',
-}
-*/
-
-/* 
-exec { "install-foo":
-    command => "curl -s -o /tmp/foo.run http://example.com/foo.run \
-                && chmod o+x /tmp/foo.run \
-                && /tmp/foo.run ",
-    creates => "/usr/local/bin/foo",
-}
-*/
-
-/* 
-$serial = "2009092501"
-$serialfile = "/var/log/puppet/foo.serial"
-exec { "install-foo":
-    command => "curl -s -o /tmp/foo.run http://example.com/foo.run \
-                && chmod o+x /tmp/foo.run \
-                && /tmp/foo.run \
-                && echo \"$serial\" > \"$serialfile\"",",
-    unless  => "test \"`cat $serialfile 2>/dev/null`\" = \"$serial\"",
-}
-*/
 
